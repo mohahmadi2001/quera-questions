@@ -1,0 +1,96 @@
+@font-face {
+  font-family: DigitalNumbers;
+  src: url(./DigitalNumbers.woff);
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(./RobotoCondensed.woff);
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  text-align: right;
+  font-size: 3.5em;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#app {
+  height: 70%;
+  min-height: 280px;
+  width: 80%;
+  max-width: 580px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#result {
+  background-color: #eee;
+  color: #444;
+  font-family: DigitalNumbers;
+  height: 28%;
+  width: 100%;
+}
+
+#keypad {
+  color: #ddd;
+  font-family: RobotoCondensed;
+  height: 72%;
+  width: 100%;
+
+  display: flex;
+}
+
+#nums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  width: 54%;
+  text-align: center;
+  position: relative;
+}
+#nums :nth-child(even) {
+  background-color: #19676e;
+}
+#nums :nth-child(odd) {
+  background-color: #095057;
+}
+
+#ops {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  width: 46%;
+  text-align: center;
+}
+#ops :nth-child(even) {
+  background-color: #b52d26;
+}
+#ops :nth-child(odd) {
+  background-color: #d34e47;
+}
+#plus {
+  grid-row: 3/5;
+  background-color: #c43e37 !important;
+}
